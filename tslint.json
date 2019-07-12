@@ -1,0 +1,58 @@
+{
+  "extends": ["tslint-config-airbnb", "tslint-config-prettier"],
+  "linterOptions": {
+    "exclude": [
+      "**/registerServiceWorker.ts",
+      "config/**/*.js",
+      "**/*.test.tsx",
+      "**/*.js",
+      "node_modules/**/*.ts",
+      "coverage/lcov-report/*.js",
+      "**/SampleData.*"
+    ]
+  },
+  "rules": {
+    "comment-format": [false],
+    "import-name": [false],
+    "max-line-length": {
+      "options": [200],
+      "severity": "warning"
+    },
+    "member-access": [true, "no-public"],
+    "no-boolean-literal-compare": false,
+    "no-console": false,
+    "no-increment-decrement": false,
+    "no-trailing-whitespace": {
+      "options": [
+        "ignore-comments",
+        "ignore-jsdoc",
+        "ignore-template-strings",
+        "ignore-blank-lines"
+      ],
+      "severity": "warning"
+    },
+    "ter-indent": {
+      "options": [
+        4,
+        {
+          "SwitchCase": 1
+        }
+      ],
+      "severity": "warning"
+    },
+    "trailing-comma": {
+      "options": {
+        "singleline": "never",
+        "multiline": {
+          "objects": "always",
+          "arrays": "always",
+          "functions": "never",
+          "typeLiterals": "ignore"
+        },
+        "esSpecCompliant": true
+      },
+      "severity": "warning"
+    },
+    "variable-name": [true, "allow-pascal-case"]
+  }
+}
