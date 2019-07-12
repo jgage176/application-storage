@@ -1,4 +1,4 @@
-import { Dictionary } from './SaveLoadTypes';
+import { Dictionary } from './AppStorageTypes';
 
 export function loadFromLocalStorage(valueName: string) {
     try {

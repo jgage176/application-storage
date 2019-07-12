@@ -1,5 +1,5 @@
-export * from './SaveLoadFactory';
-export { default as SaveLoadLocalStorage } from './SaveLoadLocalStorage';
-export { default as SaveLoadSessionStorage } from './SaveLoadSessionStorage';
-export * from './SaveLoadStorage';
-export * from './SaveLoadTypes';
+export * from './AppStorageFactory';
+export { default as LocalAppStorage } from './LocalAppStorage';
+export { default as SessionAppStorage } from './SessionAppStorage';
+export * from './AppStorage';
+export * from './AppStorageTypes';

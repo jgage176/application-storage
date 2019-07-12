@@ -4,9 +4,10 @@
   "description": "Save and load objects and state easily to either session storage or local storage. Works great inside or outside React.",
   "main": "dist/index.js",
   "scripts": {
-    "build": "tsc",
+    "build": "npm run lint && tsc",
     "prepare": "npm run build",
     "test": "jest",
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}'",
     "devtest": "jest --watchAll"
   },
   "dependencies": {},
@@ -18,6 +19,7 @@
     "ts-jest": "^24.0.2",
     "tslint": "^5.15.0",
     "tslint-config-airbnb": "^5.11.1",
+    "tslint-config-prettier": "^1.18.0",
     "typescript": "3.4.1"
   },
   "repository": {
