@@ -1,0 +1,47 @@
+{
+  "name": "application-storage",
+  "version": "1.0.0",
+  "description": "Save and load objects and state easily to either session storage or local storage. Works great inside or outside React.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/jest": "^24.0.15",
+    "@types/node": "^11.13.4",
+    "jest": "^24.8.0",
+    "ts-jest": "^24.0.2",
+    "tslint": "^5.15.0",
+    "tslint-config-airbnb": "^5.11.1",
+    "typescript": "3.4.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://microsoft.visualstudio.com/DefaultCollection/Universal%20Store/_git/OC.OCEX.Common"
+  },
+  "keywords": [
+    "react",
+    "angular",
+    "browser",
+    "chrome",
+    "edge",
+    "app",
+    "typescript",
+    "javascript",
+    "HTML5",
+    "session",
+    "storage",
+    "sessionStorage",
+    "localStorage",
+    "functional",
+    "save",
+    "load",
+    "restore",
+    "state"
+  ],
+  "author": "jegage",
+  "license": "MIT"
+}
