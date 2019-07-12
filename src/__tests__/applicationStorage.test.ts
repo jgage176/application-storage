@@ -1,4 +1,4 @@
-import {SaveLoadLocalStorage, saveLoadFactory, SaveLocation} from '../';
+import {SaveLoadLocalStorage, saveLoadFactory} from '../';
 
 describe('Save and load local storage directly with SaveLoadLocalStorage', () => {
     it('Can save a string', () => {
@@ -27,7 +27,7 @@ describe('Save and load local storage directly with SaveLoadLocalStorage', () =>
 
 describe('Save and load local storage via factory', () => {
     it('Can save an object', () => {
-        const saveLoad = saveLoadFactory("ObjectTest", SaveLocation.LocalStorage);
+        const saveLoad = saveLoadFactory("ObjectTest", "local");
         const expectedValue = {str: "string", num: 1};
         saveLoad.setValue(expectedValue);
         expect(saveLoad.getValue()).toEqual(expectedValue);
@@ -36,23 +36,23 @@ describe('Save and load local storage via factory', () => {
 
 describe('Save and load session storage', () => {
     it('Can save a string', () => {
-        const saveLoad = saveLoadFactory("SessionStorage", SaveLocation.SessionStorage);
+        const saveLoad = saveLoadFactory("SessionStorage", "session");
         saveLoad.setValue("string");
         expect(saveLoad.getValue()).toEqual("string");
     });
     it('Can save a number', () => {
-        const saveLoad = saveLoadFactory("SessionStorage", SaveLocation.SessionStorage);
+        const saveLoad = saveLoadFactory("SessionStorage", "session");
         saveLoad.setValue(1);
         expect(saveLoad.getValue()).toEqual(1);
     });
     it('Can save an object', () => {
-        const saveLoad = saveLoadFactory("SessionStorage", SaveLocation.SessionStorage);
+        const saveLoad = saveLoadFactory("SessionStorage", "session");
         const expectedValue = {str: "string", num: 1};
         saveLoad.setValue(expectedValue);
         expect(saveLoad.getValue()).toEqual(expectedValue);
     });
     it('Can save an array', () => {
-        const saveLoad = saveLoadFactory("SessionStorage", SaveLocation.SessionStorage);
+        const saveLoad = saveLoadFactory("SessionStorage", "session");
         const expectedValue = [1, 2, 3];
         saveLoad.setValue(expectedValue);
         expect(saveLoad.getValue()).toEqual(expectedValue);
@@ -60,15 +60,15 @@ describe('Save and load session storage', () => {
 });
 
 describe('Remove objects', () => {
-    it('Can remove from session storage', () => {
-        const saveLoad = saveLoadFactory("SessionStorage", SaveLocation.SessionStorage);
+    it('Can remove from local storage', () => {
+        const saveLoad = saveLoadFactory("LocalStorage", "local");
         saveLoad.setValue("string");
         expect(saveLoad.getValue()).toEqual("string");
         saveLoad.removeValue();
         expect(saveLoad.getValue()).toEqual(undefined);
     });
-    it('Can remove from local storage', () => {
-        const saveLoad = saveLoadFactory("LocalStorage", SaveLocation.LocalStorage);
+    it('Can remove from session storage', () => {
+        const saveLoad = saveLoadFactory("SessionStorage", "session");
         saveLoad.setValue("string");
         expect(saveLoad.getValue()).toEqual("string");
         saveLoad.removeValue();

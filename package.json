@@ -5,7 +5,9 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "test": "jest",
+    "devtest": "jest --watchAll"
   },
   "dependencies": {},
   "peerDependencies": {},

@@ -2,16 +2,11 @@ import { SaveLoad } from './SaveLoadTypes';
 import SaveLoadLocalStorage from './SaveLoadLocalStorage';
 import SaveLoadSessionStorage from './SaveLoadSessionStorage';
 
-export enum SaveLocation {
-    LocalStorage,
-    SessionStorage,
-}
-
-export function saveLoadFactory(name: string, saveLocation: SaveLocation): SaveLoad {
+export function saveLoadFactory(name: string, saveLocation: "local" | "session"): SaveLoad {
     switch (saveLocation) {
-        case SaveLocation.LocalStorage:
+        case "local":
             return new SaveLoadLocalStorage(name);
-        case SaveLocation.SessionStorage:
+        case "session":
             return new SaveLoadSessionStorage(name);
     }
 }
