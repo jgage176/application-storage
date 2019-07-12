@@ -1,6 +1,6 @@
 {
   "name": "application-storage",
-  "version": "1.0.0",
+  "version": "1.0.0-beta",
   "description": "Save and load objects and state easily to either session storage or local storage. Works great inside or outside React.",
   "main": "dist/index.js",
   "scripts": {
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://microsoft.visualstudio.com/DefaultCollection/Universal%20Store/_git/OC.OCEX.Common"
+    "url": "https://github.com/jgage176/application-storage"
   },
   "keywords": [
     "react",
