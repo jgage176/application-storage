@@ -1,6 +1,6 @@
 {
   "name": "application-storage",
-  "version": "1.0.0-beta",
+  "version": "1.0.0",
   "description": "Save and load objects and state easily to either session storage or local storage. Works great inside or outside React.",
   "main": "dist/index.js",
   "scripts": {
@@ -46,6 +46,11 @@
     "restore",
     "state"
   ],
-  "author": "jegage",
+  "author": {
+    "name": "Jeremy Gage"
+  },
+  "bugs": {
+    "url": "https://github.com/jgage176/application-storage/issues"
+  },
   "license": "MIT"
 }
