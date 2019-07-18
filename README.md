@@ -1,6 +1,6 @@
 # Application Storage
 
-Easy to use package for saving and loading data to the application storage, both local and session. Works great in whatever Javascript/Typescript framework you are working in without any dependencies.
+Easy to use package for saving and loading data to the application storage, both local and session. Works great in whatever Javascript/Typescript framework you are working in without any dependencies. Here is a blog post about using this package: https://passionfordev.com/easily-save-and-load-user-settings/.
 
 ## Installation
 
